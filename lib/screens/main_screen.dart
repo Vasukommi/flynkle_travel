@@ -1,6 +1,3 @@
-// lib/screens/main_screen.dart
-// This widget manages the main app structure with the bottom navigation bar.
-
 import 'package:flutter/material.dart';
 import 'package:flynkle_travel/screens/home_page.dart';
 import 'package:flynkle_travel/screens/trips_page.dart';
@@ -16,6 +13,7 @@ class MainScreen extends StatefulWidget {
   State<MainScreen> createState() => _MainScreenState();
 }
 
+/// Holds the main navigation scaffold and bottom navigation bar.
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 

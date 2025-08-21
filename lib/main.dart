@@ -1,13 +1,11 @@
-// lib/main.dart
-// This file is now much cleaner and only handles the app's entry point.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/screens/main_screen.dart'; // Make sure to replace your_app_name with your actual project name
+import 'package:flynkle_travel/screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+/// Root widget for the Flynkle Travel application.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

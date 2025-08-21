@@ -1,16 +1,14 @@
-// lib/widgets/discounts_section.dart
-// This widget displays the "Fancy a discount?" section.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/models/destination_model.dart'; // Replace with your app name
-import 'package:flynkle_travel/widgets/discount_card.dart'; // Replace with your app name
+import 'package:flynkle_travel/models/destination_model.dart';
+import 'package:flynkle_travel/widgets/discount_card.dart';
 
+/// Section highlighting discounted destinations.
 class DiscountsSection extends StatelessWidget {
   const DiscountsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Mock data for discount destinations
+    // Sample destination data for discounts.
     final List<Destination> discountDestinations = [
       Destination(
         imageUrl:
@@ -37,7 +35,6 @@ class DiscountsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Section Header
         Padding(
           padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
           child: Column(
@@ -72,7 +69,6 @@ class DiscountsSection extends StatelessWidget {
             ],
           ),
         ),
-        // Horizontal List of Cards
         SizedBox(
           height: 250.0,
           child: ListView.builder(

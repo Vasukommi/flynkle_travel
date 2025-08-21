@@ -1,9 +1,7 @@
-// lib/widgets/travel_plan_card.dart
-// A card to display a single travel plan.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/models/travel_plan_model.dart'; // Replace with your app name
+import 'package:flynkle_travel/models/travel_plan_model.dart';
 
+/// Card widget displaying details of a travel plan.
 class TravelPlanCard extends StatelessWidget {
   final TravelPlan plan;
 
@@ -30,14 +28,12 @@ class TravelPlanCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Overlapping Avatars
+          // Display user avatar with overlapping country flags.
           SizedBox(
             height: 50,
-            // The Stack's parent needs a defined width to prevent its positioned
-            // children from being clipped.
+            // Parent needs width so positioned children aren't clipped.
             child: Stack(
               children: [
-                // User Avatar is always the first element
                 CircleAvatar(
                   radius: 25,
                   backgroundColor: Colors.grey[200],
@@ -45,11 +41,11 @@ class TravelPlanCard extends StatelessWidget {
                 ),
                 // Generate flag avatars from the list
                 ...List.generate(plan.countryFlagUrls.length, (index) {
-                  // We limit to showing a max of 2-3 flags to avoid overflow
+                  // Limit to two flags to avoid overflow.
                   if (index > 1) return const SizedBox.shrink();
 
                   return Positioned(
-                    // Each flag is pushed further to the right
+                    // Offset each flag to create an overlap effect.
                     left: 35.0 * (index + 1),
                     child: CircleAvatar(
                       radius: 25,
@@ -68,7 +64,6 @@ class TravelPlanCard extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          // Plan Details
           Text(
             plan.title,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -81,7 +76,6 @@ class TravelPlanCard extends StatelessWidget {
             style: TextStyle(color: Colors.grey[600], fontSize: 14),
           ),
           const Spacer(),
-          // Location Chip
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(

@@ -1,6 +1,4 @@
-// lib/models/destination_model.dart
-// A simple class to hold our destination data.
-
+/// Model representing a travel destination.
 class Destination {
   final String imageUrl;
   final String city;

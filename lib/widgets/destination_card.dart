@@ -1,9 +1,7 @@
-// lib/widgets/destination_card.dart
-// A reusable card widget to display a single destination.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/models/destination_model.dart'; // Replace with your app name
+import 'package:flynkle_travel/models/destination_model.dart';
 
+/// Card showing a single travel destination.
 class DestinationCard extends StatelessWidget {
   final Destination destination;
 
@@ -29,7 +27,6 @@ class DestinationCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
         child: Stack(
           children: <Widget>[
-            // Background Image
             Positioned.fill(
               child: Image.network(
                 destination.imageUrl,
@@ -61,7 +58,7 @@ class DestinationCard extends StatelessWidget {
                     },
               ),
             ),
-            // Gradient Overlay for better text visibility
+            // Gradient overlay for better text visibility
             Positioned.fill(
               child: Container(
                 decoration: BoxDecoration(
@@ -73,7 +70,6 @@ class DestinationCard extends StatelessWidget {
                 ),
               ),
             ),
-            // City Name
             Positioned(
               top: 15.0,
               left: 15.0,
