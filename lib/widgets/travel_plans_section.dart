@@ -1,16 +1,14 @@
-// lib/widgets/travel_plans_section.dart
-// This widget displays the "Travel Plans" section.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/models/travel_plan_model.dart'; // Replace with your app name
-import 'package:flynkle_travel/widgets/travel_plan_card.dart'; // Replace with your app name
+import 'package:flynkle_travel/models/travel_plan_model.dart';
+import 'package:flynkle_travel/widgets/travel_plan_card.dart';
 
+/// Section displaying a horizontal list of upcoming travel plans.
 class TravelPlansSection extends StatelessWidget {
   const TravelPlansSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Mock data for travel plans, now using a list for flags
+    // Sample travel plan data with country flags.
     final List<TravelPlan> travelPlans = [
       TravelPlan(
         userAvatarUrl:
@@ -26,7 +24,7 @@ class TravelPlansSection extends StatelessWidget {
         countryFlagUrls: [
           'https://flagcdn.com/w320/cz.png',
           'https://flagcdn.com/w320/de.png',
-        ], // This plan now has two flags
+        ],
         title: 'Europe trip',
         date: 'Aug - Sep 2025',
         location: 'Czech Republic',
@@ -45,7 +43,6 @@ class TravelPlansSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Column(
         children: [
-          // Section Header
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
@@ -84,7 +81,6 @@ class TravelPlansSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          // Horizontal List of Cards
           SizedBox(
             height: 240.0,
             child: ListView.builder(

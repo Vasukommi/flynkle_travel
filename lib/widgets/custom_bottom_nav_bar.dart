@@ -1,8 +1,6 @@
-// lib/widgets/custom_bottom_nav_bar.dart
-// The custom bottom navigation bar widget.
-
 import 'package:flutter/material.dart';
 
+/// Navigation bar used across the bottom of the app.
 class CustomBottomNavBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;

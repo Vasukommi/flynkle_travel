@@ -1,8 +1,6 @@
-// lib/widgets/custom_header.dart
-// The custom header widget.
-
 import 'package:flutter/material.dart';
 
+/// Gradient header with search field and user avatar.
 class CustomHeader extends StatelessWidget {
   const CustomHeader({super.key});
 

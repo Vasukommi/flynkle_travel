@@ -1,16 +1,14 @@
-// lib/widgets/trending_destinations.dart
-// This widget displays the "Trending Destinations" section with a horizontal list.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/models/destination_model.dart'; // Replace with your app name
-import 'package:flynkle_travel/widgets/destination_card.dart'; // Replace with your app name
+import 'package:flynkle_travel/models/destination_model.dart';
+import 'package:flynkle_travel/widgets/destination_card.dart';
 
+/// Horizontal list showcasing trending destinations.
 class TrendingDestinations extends StatelessWidget {
   const TrendingDestinations({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Mock data for our destinations
+    // Sample destination data.
     final List<Destination> destinations = [
       Destination(
         imageUrl:

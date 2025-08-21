@@ -1,9 +1,7 @@
-// lib/widgets/discount_card.dart
-// A reusable card widget for the discounts section.
-
 import 'package:flutter/material.dart';
-import 'package:flynkle_travel/models/destination_model.dart'; // Replace with your app name
+import 'package:flynkle_travel/models/destination_model.dart';
 
+/// Card used within the discounts section.
 class DiscountCard extends StatelessWidget {
   final Destination destination;
 
@@ -29,7 +27,6 @@ class DiscountCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(25.0),
         child: Stack(
           children: <Widget>[
-            // Background Image
             Positioned.fill(
               child: Image.network(
                 destination.imageUrl,
@@ -53,7 +50,7 @@ class DiscountCard extends StatelessWidget {
                     },
               ),
             ),
-            // Gradient Overlay for text visibility
+            // Gradient overlay improves text contrast.
             Positioned(
               bottom: 0,
               left: 0,
@@ -69,7 +66,6 @@ class DiscountCard extends StatelessWidget {
                 ),
               ),
             ),
-            // City Name
             Positioned(
               bottom: 20.0,
               left: 20.0,
